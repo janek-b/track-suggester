@@ -18,7 +18,8 @@ $(function() {
     event.preventDefault();
     // debugger;
 
-    $(".surveyResult p").hide();
+
+    $(".surveyResult, .surveyResult p").hide();
     $(".alert").slideUp();
 
     var answerTotal = 0;
@@ -35,6 +36,7 @@ $(function() {
     };
 
     if (allAnswered) {
+      $(".surveyResult").show()
       $("#"+getTrack(answerTotal)).show();
     };
   });
