@@ -1,5 +1,5 @@
 var getTrack = function(answerSum) {
-  // return track based on which range answerSum falls
+  // return track based on into which range answerSum falls
   if (answerSum > 200) {
     return "Java"
   } else if (answerSum > 100) {
@@ -34,21 +34,14 @@ $(function() {
       };
     };
 
-
     if (allAnswered) {
       $("#"+getTrack(answerTotal)).show();
     };
-
-
-    // get sum of answers
-
-
-
   });
 });
 
 
-// Answer weighting system
+// Answer weight system
 
 //C#    -    enterprise, microsoft, desktop     100-200
 //Java  -    enterprise, Android(mobile)        200+
