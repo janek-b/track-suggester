@@ -1,5 +1,16 @@
 var getTrack = function(answerSum) {
   // return track based on which range answerSum falls
+  if (answerSum > 200) {
+    return "Java"
+  } else if (answerSum > 100) {
+    return "C#"
+  } else if (answerSum > 90) {
+    return "PHP"
+  } else if (answerSum > 80) {
+    return "Ruby"
+  } else {
+    return "CSS"
+  }
 };
 
 $(function() {
@@ -15,7 +26,7 @@ $(function() {
     // add check that all answers are selected
     if (answer1 && answer2 && answer3 && answer4 && answer5) {
       var answerTotal = answer1 + answer2 + answer3 + answer4 + answer5;
-      console.log(answerTotal);
+      console.log(getTrack(answerTotal));
     } else {
       // add error message with bootstrap alert
       console.log("please answer all questions");
