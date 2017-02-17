@@ -23,10 +23,11 @@ hr {
 
 }
 
-img {
-  height: 100%;
+#epicodusLogo {
+  height: 100px;
   padding: 20px;
-  float: left;
+  margin: auto;
+  display: block;
 }
 
 #topBar {
@@ -36,11 +37,6 @@ img {
   letter-spacing: 1px;
   text-decoration: none;
   text-transform: uppercase;
-  height: 100px;
-}
-
-#topBar > div {
-  height: 100%;
 }
 
 #topBar h1 {
