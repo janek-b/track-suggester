@@ -17,23 +17,24 @@ $(function() {
   $("#surveyForm").submit(function() {
     event.preventDefault();
     // debugger;
-    var answer1 = parseInt($("input:radio[name=question1]:checked").val());
-    var answer2 = parseInt($("input:radio[name=question2]:checked").val());
-    var answer3 = parseInt($("input:radio[name=question3]:checked").val());
-    var answer4 = parseInt($("input:radio[name=question4]:checked").val());
-    var answer5 = parseInt($("input:radio[name=question5]:checked").val());
 
-    // add check that all answers are selected
+    var answerTotal = 0;
+    var allAnswered = true;
+    for (var i = 1; i < 6; i++) {
+      var answer = parseInt($("input:radio[name=question"+i+"]:checked").val());
+      if (answer) {
+        answerTotal += answer;
+      } else {
+        allAnswered = false;
+        console.log("answer"+i+" was not answered");
+      };
+    };
 
     $(".surveyResult p").hide();
-    if (answer1 && answer2 && answer3 && answer4 && answer5) {
-      var answerTotal = answer1 + answer2 + answer3 + answer4 + answer5;
-      console.log(getTrack(answerTotal));
+    if (allAnswered) {
       $("#"+getTrack(answerTotal)).show();
-    } else {
-      // add error message with bootstrap alert
-      console.log("please answer all questions");
     };
+
 
     // get sum of answers
 
