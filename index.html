@@ -16,122 +16,108 @@
       </div>
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <form id="surveryForm">
+          <form id="surveyForm">
 
             <div class="form-group">
-              <label for="question1">Question 1</label>
+              <label for="question1">What kind of company would you like to work for?</label>
               <div class="radio">
                 <label>
-                  <input type="radio" name="question1" value="answer1">
-                  Answer1
+                  <input type="radio" name="question1" value="100">
+                  A large enterprise company
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="question1" value="answer2">
-                  Answer2
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question1" value="answer3">
-                  Answer3
+                  <input type="radio" name="question1" value="50">
+                  A small company or startup
                 </label>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="question2">Question 2</label>
+              <label for="question2">What kind of projects would you like to work on?</label>
               <div class="radio">
                 <label>
-                  <input type="radio" name="question2" value="answer1">
-                  Answer1
+                  <input type="radio" name="question2" value="10">
+                  web-sites
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="question2" value="answer2">
-                  Answer2
+                  <input type="radio" name="question2" value="150">
+                  mobile-apps
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="question2" value="answer3">
-                  Answer3
-                </label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="question3">Question 3</label>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question3" value="answer1">
-                  Answer1
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question3" value="answer2">
-                  Answer2
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question3" value="answer3">
-                  Answer3
+                  <input type="radio" name="question2" value="50">
+                  desktop apps and enterprise level software
                 </label>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="question4">Question 4</label>
+              <label for="question3">Which of these sounds most like something you would say?</label>
               <div class="radio">
                 <label>
-                  <input type="radio" name="question4" value="answer1">
-                  Answer1
+                  <input type="radio" name="question3" value="20">
+                  A good website is informative and has a lot of things to look at
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="question4" value="answer2">
-                  Answer2
+                  <input type="radio" name="question3" value="10">
+                  A good website should be interactive and respond to my actions
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="question4" value="answer3">
-                  Answer3
+                  <input type="radio" name="question3" value="5">
+                  A good website should be nice to look at
                 </label>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="question5">Question 5</label>
+              <label for="question4">Which of these sound more interesting to you?</label>
               <div class="radio">
                 <label>
-                  <input type="radio" name="question5" value="answer1">
-                  Answer1
+                  <input type="radio" name="question4" value="10">
+                  Making the things a user sees look nice and interactive
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="question5" value="answer2">
-                  Answer2
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question5" value="answer3">
-                  Answer3
+                  <input type="radio" name="question4" value="15">
+                  Creating the stuff behind the scenes that makes things work
                 </label>
               </div>
             </div>
 
+            <div class="form-group">
+              <label for="question5">which are you more comfortable with?</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="question5" value="1">
+                  Windows
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="question5" value="1">
+                  macOS
+                </label>
+              </div>
+            </div>
 
             <button type="submit" class="btn btn-warning">Submit Survey</button>
           </form>
         </div>
+      </div>
+      <div class="row">
+        <!-- output result as modal -->
+        <p id="output"></p>
+
       </div>
     </div>
 
