@@ -22,8 +22,6 @@ $(function() {
 
   $("#surveyForm").submit(function() {
     event.preventDefault();
-    // debugger;
-
 
     $(".surveyResult, .surveyResult p").hide();
     $(".alert").slideUp();
@@ -42,7 +40,8 @@ $(function() {
     };
 
     if (allAnswered) {
-      $(".surveyResult").show()
+      $(".surveyResult").show();
+      $("#resultsModal").modal();
       $("#"+getTrack(answerTotal)).show();
     };
   });

@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <title>Track Suggester</title>
   </head>
@@ -24,10 +25,20 @@
     <div class="container-fluid" id="infoPage">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <div class="well">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button type="button" class="btn btn-default" id="toSurvey">Find out which track is best for you</button>
-          </div>
+          <h3>Epicodus Tracks</h3>
+          <p>These are the different tracks Epicodus offers. All tracks include an Intro course and a JavaScript course. <a href="https://www.epicodus.com/courses-overview/">Click here</a> to learn more about the Courses offered.</p>
+          <ul>
+            <li>Ruby/Rails</li>
+            <li>PHP/Drupal</li>
+            <li>Java/Android</li>
+            <li>CSS/Design</li>
+            <li>C#/.NET</li>
+          </ul>
+
+          <p>For help on choosing a track click the button below to take a short survey.</p>
+
+          <button type="button" class="btn btn-default" id="toSurvey">Find out which track is best for you</button>
+
         </div>
       </div>
 
@@ -149,22 +160,36 @@
               </div>
             </div>
 
+            <!-- <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#resultsModal">Submit Survey</button> -->
+
             <button type="submit" class="btn btn-default">Submit Survey</button>
           </form>
-        </div>
-      </div>
-      <div class="row">
-        <!-- output result as modal -->
-        <div class="col-md-8 col-md-offset-2">
-          <div class="well surveyResult">
-            <p id="Java">You should study Java</p>
-            <p id="NET">You should study C#</p>
-            <p id="PHP">You should study PHP</p>
-            <p id="Ruby">You should study Ruby</p>
-            <p id="CSS">You should study CSS</p>
-          </div>
-        </div>
 
+          <div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Survey Results</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="well surveyResult">
+                    <p id="Java">You should study Java</p>
+                    <p id="NET">You should study C#</p>
+                    <p id="PHP">You should study PHP</p>
+                    <p id="Ruby">You should study Ruby</p>
+                    <p id="CSS">You should study CSS</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
       </div>
     </div>
 
