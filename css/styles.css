@@ -1,3 +1,7 @@
 .surveyResult p {
   display: none;
 }
+
+.alert {
+  display: none;
+}

@@ -18,6 +18,9 @@ $(function() {
     event.preventDefault();
     // debugger;
 
+    $(".surveyResult p").hide();
+    $(".alert").slideUp();
+
     var answerTotal = 0;
     var allAnswered = true;
     for (var i = 1; i < 6; i++) {
@@ -26,11 +29,12 @@ $(function() {
         answerTotal += answer;
       } else {
         allAnswered = false;
+        $("#question"+i+" .alert").slideDown();
         console.log("answer"+i+" was not answered");
       };
     };
 
-    $(".surveyResult p").hide();
+
     if (allAnswered) {
       $("#"+getTrack(answerTotal)).show();
     };
