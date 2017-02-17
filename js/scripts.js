@@ -14,6 +14,12 @@ var getTrack = function(answerSum) {
 };
 
 $(function() {
+  $("#toSurvey").click(function() {
+    $("#infoPage").slideUp();
+    $("#survey").slideDown();
+  })
+
+
   $("#surveyForm").submit(function() {
     event.preventDefault();
     // debugger;
