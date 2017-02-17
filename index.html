@@ -18,7 +18,6 @@
         <div class="col-md-8">
           <h1>Track Suggester</h1>
         </div>
-
       </div>
       <hr>
     </div>
@@ -34,18 +33,14 @@
             <li>CSS/Design</li>
             <li>C#/.NET</li>
           </ul>
-
           <p>For help on choosing a track click the button below to take a short survey.</p>
-
           <button type="button" class="btn btn-default" id="toSurvey">Find out which track is best for you</button>
-
         </div>
       </div>
-
     </div>
     <div class="container-fluid" id="survey">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-6 col-md-offset-3">
           <form id="surveyForm">
 
             <div class="form-group" id="question1">
@@ -159,9 +154,6 @@
                 </label>
               </div>
             </div>
-
-            <!-- <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#resultsModal">Submit Survey</button> -->
-
             <button type="submit" class="btn btn-default">Submit Survey</button>
           </form>
 
@@ -170,15 +162,30 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Survey Results</h4>
+                  <h4 class="modal-title" id="myModalLabel"><span id="surveyTrack"></span></h4>
                 </div>
                 <div class="modal-body">
                   <div class="well surveyResult">
-                    <p id="Java">You should study Java</p>
-                    <p id="NET">You should study C#</p>
-                    <p id="PHP">You should study PHP</p>
-                    <p id="Ruby">You should study Ruby</p>
-                    <p id="CSS">You should study CSS</p>
+                    <div id="Java">
+                      <p>The <strong>Java/Android</strong> track would be a good match for you</p>
+                      <p><a href="https://www.epicodus.com/java">Click here</a> to learn more about this track</p>
+                    </div>
+                    <div id="NET">
+                      <p>The <strong>C#/.NET</strong> track would be a good match for you</p>
+                      <p><a href="https://www.epicodus.com/c-sharp">Click here</a> to learn more about this track</p>
+                    </div>
+                    <div id="PHP">
+                      <p>The <strong>PHP/Drupal</strong> track would be a good match for you</p>
+                      <p><a href="https://www.epicodus.com/php">Click here</a> to learn more about this track</p>
+                    </div>
+                    <div id="Ruby">
+                      <p>The <strong>Ruby/Rails</strong> track would be a good match for you</p>
+                      <p><a href="https://www.epicodus.com/ruby">Click here</a> to learn more about this track</p>
+                    </div>
+                    <div id="CSS">
+                      <p>The <strong>CSS/Design</strong> track would be a good match for you</p>
+                      <p><a href="https://www.epicodus.com/css">Click here</a> to learn more about this track</p>
+                    </div>
                   </div>
                 </div>
                 <div class="modal-footer">
@@ -188,10 +195,8 @@
             </div>
           </div>
 
-
         </div>
       </div>
     </div>
-
   </body>
 </html>

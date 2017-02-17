@@ -19,13 +19,10 @@ $(function() {
     $("#survey").slideDown();
   })
 
-
   $("#surveyForm").submit(function() {
     event.preventDefault();
-
-    $(".surveyResult, .surveyResult p").hide();
+    $(".surveyResult, .surveyResult div").hide();
     $(".alert").slideUp();
-
     var answerTotal = 0;
     var allAnswered = true;
     for (var i = 1; i < 6; i++) {
@@ -38,11 +35,11 @@ $(function() {
         console.log("answer"+i+" was not answered");
       };
     };
-
     if (allAnswered) {
       $(".surveyResult").show();
-      $("#resultsModal").modal();
+      $("#surveyTrack").text($("#"+getTrack(answerTotal)+" strong").text())
       $("#"+getTrack(answerTotal)).show();
+      $("#resultsModal").modal();
     };
   });
 });
