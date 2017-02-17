@@ -3,7 +3,7 @@ var getTrack = function(answerSum) {
   if (answerSum > 200) {
     return "Java"
   } else if (answerSum > 100) {
-    return "C#"
+    return "NET"
   } else if (answerSum > 90) {
     return "PHP"
   } else if (answerSum > 80) {
@@ -24,9 +24,12 @@ $(function() {
     var answer5 = parseInt($("input:radio[name=question5]:checked").val());
 
     // add check that all answers are selected
+
+    $(".surveyResult p").hide();
     if (answer1 && answer2 && answer3 && answer4 && answer5) {
       var answerTotal = answer1 + answer2 + answer3 + answer4 + answer5;
       console.log(getTrack(answerTotal));
+      $("#"+getTrack(answerTotal)).show();
     } else {
       // add error message with bootstrap alert
       console.log("please answer all questions");
