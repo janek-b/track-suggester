@@ -1,5 +1,5 @@
 var getTrack = function(answerSum) {
-  // return track based on into which range answerSum falls
+  // return track based on the range answerSum is in
   if (answerSum > 200) {
     return "Java"
   } else if (answerSum > 100) {
@@ -49,10 +49,9 @@ $(function() {
 
 //C#    -    enterprise, microsoft, desktop     100-200
 //Java  -    enterprise, Android(mobile)        200+
-//PHP   -    web, content-heavy, back           95
-//Ruby  -    web, dynamic-content, interactive  80 - 85
-//CSS   -    web, design, front                 75
-
+//PHP   -    web, content-heavy, back           90-100
+//Ruby  -    web, dynamic-content, interactive  80-90
+//CSS   -    web, design, front                 75-80
 
 //question1
 //What kind of company would you like to work for?
@@ -78,5 +77,5 @@ $(function() {
 
 //question5
 //which are you more comfortable with?
-//0    - windows
-//0    - macOS
+//1    - windows
+//1    - macOS
